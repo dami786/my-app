@@ -46,7 +46,7 @@ function hero1() {
           {products3.map((product3) => (
             <SwiperSlide key={product3.id}>
               <div className='h-fit  mt-2'>
-                <div className='flex absolute  mt-4 mx-2 gap-17'>
+                <div className='flex absolute  mt-4 mx-2 gap-13'>
                   <p className='text-xs bg-white/70 backdrop-blur-lg border border-white/50 px-2 py-1 rounded-full'>{product3.Label}</p>
                   <p className='text-black text-white hover:scale-110'>{product3.label2}</p>
 
@@ -80,7 +80,7 @@ function hero1() {
 
           {products4.map((product4) => (
             <SwiperSlide key={product4.id} className='h-fit mt-3'>
-              <div className='flex absolute  mt-4 mx-2 gap-17'>
+              <div className='flex absolute  mt-4 mx-2 gap-13'>
                 <p className='text-xs bg-white/70 backdrop-blur-lg border border-white/50 px-2 py-1 rounded-full'>{product4.Label}</p>
                 <p className='text-black text-white hover:scale-110'>{product4.label2}</p>
 
