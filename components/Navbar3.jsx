@@ -297,9 +297,9 @@ function Navbar() {
                       )}
                     </div>
                     {isOpen  && (
-                      <div ref={dropdownRef} className='bg-white absolute  z-5 h-[66px] top-28  left-72 w-[298px] border-gray-100 rounded-full transition-smooth duration-100'></div>
+                      <div ref={dropdownRef} className='bg-white absolute z-5 h-[68px] top-28 w-[300px] border-gray-100 rounded-full transition-smooth duration-100'></div>
                     )
-                    }
+                    } 
                   </div>
                   <div className='py-4 w-[140px] hover:bg-gray-100 border-gray-100 hover:rounded-full group z-10 text-sm  ' onClick={() => { setIsOpen4(!isOpen4) }}>
                     {isOpen4  && (
