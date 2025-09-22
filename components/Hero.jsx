@@ -14,7 +14,7 @@ function Hero() {
     
 
     
-      <div className=' px-8 mt-2 relative '>
+      <div className=' lg:px-8 px-4 relative '>
         <div className='flex items-center justify-between'>
       <p className='font-bold text-2xl text-black mt-8 flex items-center'>Popular Homes in Lahore<span><ChevronRight size={20} /></span></p>
       <div className='flex items-center mt-8'>
@@ -22,36 +22,57 @@ function Hero() {
         <button className="hero-next rounded-full"><ChevronRight size={20}/></button>
         </div>
         </div>
-        <Swiper slidesPerView={6} spaceBetween={12} modules={[Navigation]} navigation={{ nextEl: '.hero-next', prevEl: '.hero-prev' }}>
+        <Swiper
+  slidesPerView={6}
+  spaceBetween={12}
+  modules={[Navigation]}
+  navigation={{ nextEl: '.hero-next', prevEl: '.hero-prev' }}
+  breakpoints={{
+    
+    0: {
+      slidesPerView: 2,
+    },
+   
+    768: {
+      slidesPerView: 4,
+    },
+     1024: {
+      slidesPerView: 6,
+    },
+  }}
+>
+  {products.map((product) => (
+    <SwiperSlide key={product.id}>
+      <div className='h-fit mt-2'>
+        <div className='flex gap-15 lg:gap-13 mx-2 absolute mt-4 '>
+          <p className='text-xs bg-white/70 backdrop-blur-lg border border-white/50 px-1 lg:px-2 py-1 rounded-full'>
+            {product.Label}
+          </p>
+          <p className='text-white hover:scale-110'>{product.label2}</p>
+        </div>
+        <div>
+          <img
+            src={product.image}
+            className='h-[200px] w-[250px] rounded-2xl object-cover'
+          />
+        </div>
+        <p className='font-semibold mt-1 ml-1'>{product.tittle}</p>
+        <div className='flex items-center ml-1'>
+          <p className='text-xs'>${product.Price} .</p>
+          <span className='text-xs flex items-center gap-1'>
+            {product.Icon2}
+            {product.Rating.toFixed(1)}
+          </span>
+        </div>
+      </div>
+    </SwiperSlide>
+  ))}
+</Swiper>
 
-          {products.map((product) => (
-            <SwiperSlide key={product.id}>
-              <div className='h-fit  mt-2'>
-                <div className='flex absolute  mt-4 mx-2 gap-13'>
-                  <p className='text-xs bg-white/70 backdrop-blur-lg border border-white/50 px-2 py-1 rounded-full'>{product.Label}</p>
-                  <p className='text-black text-white hover:scale-110'>{product.label2}</p>
-
-                </div>
-                <div>
-                  <img
-                    src={product.image}
-                    className='h-[200px] w-[250px] rounded-2xl object-cover'
-                  />
-                </div>
-                <p className='font-semibold mt-1 ml-1'>{product.tittle}</p>
-                <div className='flex items-center ml-1'>
-                  <p className='text-xs'>${product.Price} .</p>
-                  <span className='text-xs flex items-center gap-1'>{product.Icon2}{product.Rating.toFixed(1)}</span>
-                </div>
-
-              </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
       </div>
 
       
-      <div className=' px-8 mt-2 relative '>
+      <div className=' lg:px-8 px-6 mt-2 relative '>
         <div className='flex items-center justify-between'>
       <p className='font-bold text-2xl text-black mt-8 flex items-center'>Popular Homes in Murree<span><ChevronRight size={20} /></span></p>
       <div className='flex items-center mt-8'>
@@ -59,14 +80,26 @@ function Hero() {
         <button className="hero-next1 rounded-full"><ChevronRight size={20}/></button>
         </div>
         </div>
-        <Swiper slidesPerView={6} spaceBetween={12} modules={[Navigation]} navigation={{ nextEl: '.hero-next1', prevEl: '.hero-prev1' }}>
+        <Swiper slidesPerView={6} spaceBetween={12} modules={[Navigation]} navigation={{ nextEl: '.hero-next1', prevEl: '.hero-prev1' }}   breakpoints={{
+    
+    0: {
+      slidesPerView: 2,
+    },
+   
+    768: {
+      slidesPerView: 4,
+    },
+     1024: {
+      slidesPerView: 6,
+    },
+  }}>
 
           {products1.map((product1) => (
             <SwiperSlide key={product1.id}>
-              <div className='h-fit  mt-2'>
-                <div className='flex absolute  mt-4 mx-2 gap-13'>
-                  <p className='text-xs bg-white/70 backdrop-blur-lg border border-white/50 px-2 py-1 rounded-full'>{product1.Label}</p>
-                  <p className='text-black text-white hover:scale-110'>{product1.label2}</p>
+              <div className='mt-2'>
+                <div className='flex gap-15 lg:gap-13 absolute  mt-4 mx-2 '>
+                  <p className='text-xs bg-white/70 backdrop-blur-lg border border-white/50 px-1 lg:px-2 py-1 rounded-full'>{product1.Label}</p>
+                  <p className=' text-white hover:scale-110'>{product1.label2}</p>
 
                 </div>
                 <div>
@@ -94,14 +127,26 @@ function Hero() {
         <button className="hero-next2 rounded-full"><ChevronRight size={20}/></button>
         </div>
         </div>
-        <Swiper slidesPerView={6} spaceBetween={12} modules={[Navigation]} navigation={{ nextEl: '.hero-next2', prevEl: '.hero-prev2' }}>
+        <Swiper slidesPerView={6} spaceBetween={12} modules={[Navigation]} navigation={{ nextEl: '.hero-next2', prevEl: '.hero-prev2' }}   breakpoints={{
+    
+    0: {
+      slidesPerView: 2,
+    },
+   
+    768: {
+      slidesPerView: 4,
+    },
+     1024: {
+      slidesPerView: 6,
+    },
+  }}>
 
           {products2.map((product2) => (
             <SwiperSlide key={product2.id}>
               <div className='h-fit  mt-2'>
-                <div className='flex absolute  mt-4 mx-2 gap-13'>
+                <div className='flex absolute gap-15 lg:gap-13  mt-4 mx-2 '>
                   <p className='text-xs bg-white/70 backdrop-blur-lg border border-white/50 px-2 py-1 rounded-full'>{product2.Label}</p>
-                  <p className='text-black text-white hover:scale-110'>{product2.label2}</p>
+                  <p className=' text-white hover:scale-110'>{product2.label2}</p>
 
                 </div>
                 <div>
@@ -122,7 +167,7 @@ function Hero() {
         </Swiper>
       </div>
       <div>
-        <Hero1 />
+        <Hero1  />
       </div>
 
 

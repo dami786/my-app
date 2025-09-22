@@ -41,7 +41,19 @@ function hero1() {
         <button className='hero-next3'><ChevronRight/></button>
         </div>
         </div>
-        <Swiper slidesPerView={6}  spaceBetween={12} modules={[Navigation]} navigation={{ nextEl: '.hero-next3', prevEl: '.hero-prev3' }}>
+        <Swiper slidesPerView={6}  spaceBetween={12} modules={[Navigation]}   breakpoints={{
+    
+    0: {
+      slidesPerView: 2,
+    },
+   
+    768: {
+      slidesPerView: 4,
+    },
+     1024: {
+      slidesPerView: 6,
+    },
+  }} navigation={{ nextEl: '.hero-next3', prevEl: '.hero-prev3' }}>
 
           {products3.map((product3) => (
             <SwiperSlide key={product3.id}>

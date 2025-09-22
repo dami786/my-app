@@ -20,6 +20,8 @@ function Navbar() {
   const [isOpen4, setIsOpen4] = useState(false);
   const [isOpen6, setIsOpen6] = useState(false);
   const [isOpen9, setIsOpen9] = useState(false);
+ 
+
   const [selectedDate, setSelectedDate] = useState(null);
   const [selectedDate1, setSelectedDate1] = useState(null);
   const dropdownRef = useRef(null);
@@ -100,7 +102,7 @@ function Navbar() {
 
     <>
 
-      <div className='bg-gray-100  h-[210px] overflow-hidden font-sans border-b-3 border-gray-300'>
+      <div className='bg-gray-100 hidden lg:block  h-[210px] overflow-hidden font-sans border-b-3 border-gray-300'>
 
         {!showFixedNav && (
 
@@ -412,10 +414,7 @@ function Navbar() {
         </div>
       </div>
 
-
-
-
-
+      <div className='bg-gray-100 lg:hidden'>mobile navbar</div>
     </>
   )
 

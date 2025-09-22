@@ -1,4 +1,4 @@
-import { ChevronLeft, ChevronLeftIcon, ChevronRight, ChevronRightIcon, ChevronsLeftIcon, DollarSignIcon, EarthIcon, FacebookIcon, Heart, HeartIcon, HeartPulse, Instagram, Star, X } from 'lucide-react'
+import { ChevronLeft, ChevronLeftIcon, ChevronRight, ChevronRightIcon, ChevronsLeftIcon, DollarSign, DollarSignIcon, EarIcon, Earth, EarthIcon, Facebook, FacebookIcon, Heart, HeartIcon, HeartPulse, Instagram, InstagramIcon, LucideFacebook, Star, TwitchIcon, X, XIcon } from 'lucide-react'
 import React from 'react'
 import { useState } from 'react'
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -41,14 +41,27 @@ function hero1() {
             <button className='hero-next3'><ChevronRight /></button>
           </div>
         </div>
-        <Swiper slidesPerView={6} spaceBetween={12} modules={[Navigation]} navigation={{ nextEl: '.hero-next3', prevEl: '.hero-prev3' }}>
+        <Swiper slidesPerView={6} spaceBetween={12} modules={[Navigation]} navigation={{ nextEl: '.hero-next3', prevEl: '.hero-prev3' }}
+          breakpoints={{
+
+            0: {
+              slidesPerView: 2,
+            },
+
+            768: {
+              slidesPerView: 4,
+            },
+            1024: {
+              slidesPerView: 6,
+            },
+          }}>
 
           {products3.map((product3) => (
             <SwiperSlide key={product3.id}>
               <div className='h-fit  mt-2'>
                 <div className='flex absolute  mt-4 mx-2 gap-13'>
                   <p className='text-xs bg-white/70 backdrop-blur-lg border border-white/50 px-2 py-1 rounded-full'>{product3.Label}</p>
-                  <p className='text-black text-white hover:scale-110'>{product3.label2}</p>
+                  <p className=' text-white hover:scale-110'>{product3.label2}</p>
 
                 </div>
                 <div>
@@ -76,7 +89,19 @@ function hero1() {
             <button className='hero-next4 text-black'><ChevronRight /></button>
           </div>
         </div>
-        <Swiper modules={[Navigation]} slidesPerView={6} spaceBetween={12} navigation={{ nextEl: ".hero-next4", prevEl: ".hero-prev4" }}>
+        <Swiper modules={[Navigation]} slidesPerView={6} spaceBetween={12} breakpoints={{
+
+          0: {
+            slidesPerView: 2,
+          },
+
+          768: {
+            slidesPerView: 4,
+          },
+          1024: {
+            slidesPerView: 6,
+          },
+        }} navigation={{ nextEl: ".hero-next4", prevEl: ".hero-prev4" }}>
 
           {products4.map((product4) => (
             <SwiperSlide key={product4.id} className='h-fit mt-3'>
@@ -101,7 +126,7 @@ function hero1() {
           ))}
         </Swiper>
       </div>
-      <div className='h-[680px] bg-[#f7f7f7] mt-10'>
+      <div className='h-[680px] hidden lg:block  bg-[#f7f7f7] mt-10'>
         <p className='pl-6 pt-6 font-bold text-2xl '>Inspiration for Future Gateway</p>
         <div className='flex gap-4 pb-2 border-b mx-6' >
           <div className='' onClick={() => { setIsOpen1(!isOpen1) }}>
@@ -444,8 +469,8 @@ function hero1() {
 
         </div>
       </div>
-      <div>
-        <div className='bg-[#f7f7f7] flex justify-between items-center border-t-2 border-black-300 '>
+      <div className='hidden lg:block'>
+        <div className='bg-[#f7f7f7]  flex justify-between items-center border-t-2 border-black-300 '>
           <div className='py-6 mt-2 mx-6'>
             <p className='items-center'> <span>© 2025 Airbnb, Inc</span><span className='ml-1'>·Terms</span> <span className='ml-1'>Sitemap</span> <span className='ml-1 hover:underline opacity-50 hover:underline cursor-pointer hover:opacity-100'> Privacy</span> <a className='ml-1 hover:underline cursor-pointer opacity-50 hover:opacity-100'> YourPrivacyChoices</a></p>
           </div>
@@ -469,6 +494,121 @@ function hero1() {
           </div>
         </div>
       </div>
+      <div className='bg-[#f7f7f7] lg:hidden block py-6 h-[1500px] mt-4'>
+        <div className='mx-6 border-b py-2'>
+          <p className='pl-4 pt-6 font-bold text-2xl '>Inspiration for Future Gateway</p>
+
+
+
+          <div className='flex font-semibold pl-4 pt-4 gap-6 '>
+            <a>Travel tips&Inspiration</a>
+            <a>Airbnb Friendly</a>
+          </div>
+        </div>
+        <div className='flex '>
+          <div>
+        <div className='pl-10 mt-5'>
+          <h1 className='font-bold'> Family travel hub</h1>
+          <h1 className='text-m opacity-60'>Tips and trips</h1>
+          </div>
+          <div className='pl-10 mt-5'>
+          <h1 className='font-bold'> Family travel hub</h1>
+          <h1 className='text-m opacity-60'>Tips and trips</h1>
+          </div>
+          <div className='pl-10 mt-5'>
+          <h1 className='font-bold'> Family travel hub</h1>
+          <h1 className='text-m opacity-60'>Tips and trips</h1>
+          </div>
+          <div className='pl-10 mt-5'>
+          <h1 className='font-bold'> Family travel hub</h1>
+          <h1 className='text-m opacity-60'>Tips and trips</h1>
+          </div>
+          </div>
+          <div className='ml-5'>
+          <div className='pl-10 mt-5'>
+          <h1 className='font-bold'> Family travel hub</h1>
+          <h1 className='text-m opacity-60'>Tips and trips</h1>
+          </div>
+          <div className='pl-10 mt-5'>
+          <h1 className='font-bold'> Family travel hub</h1>
+          <h1 className='text-m opacity-60'>Tips and trips</h1>
+          </div>
+          <div className='pl-10 mt-5'>
+          <h1 className='font-bold'> Family travel hub</h1>
+          <h1 className='text-m opacity-60'>Tips and trips</h1>
+          </div>
+            </div>
+
+          
+          
+     </div>
+     <div className='py-3 pl-6 border-b mx-4'>
+              <h1 className='font-bold text-xl mt-6'>Support</h1>
+
+              <h1 className='mt-2'>Help Center</h1>
+              <h1 className='mt-2'>Helth care</h1>
+              <h1 className='mt-2'>Anti discrimination</h1>
+              <h1 className='mt-2'>Help Cover</h1>
+              <h1 className='mt-2'>Help Center</h1>
+              <h1 className='mt-2'>helpline</h1>
+              <h1 className='mt-2'>Help Center</h1>
+              </div>
+
+              <div className='py-3 pl-6 border-b mx-4'>
+              <h1 className='font-bold text-xl mt-6'> Airbnb</h1>
+
+              <h1 className='mt-2'>Help Center</h1>
+              <h1 className='mt-2'>Helth care</h1>
+              <h1 className='mt-2'>Anti discrimination</h1>
+              <h1 className='mt-2'>Help Cover</h1>
+              <h1 className='mt-2'>Help Center</h1>
+              <h1 className='mt-2'>helpline</h1>
+              <h1 className='mt-2'>Help Center</h1>
+              </div>
+
+              <div className='py-3 pl-6 border-b mx-4'>
+              <h1 className='font-bold text-xl mt-6'>Hosting</h1>
+
+              <h1 className='mt-2'>Help Center</h1>
+              <h1 className='mt-2'>Helth care</h1>
+              <h1 className='mt-2'>Anti discrimination</h1>
+              <h1 className='mt-2'>Help Cover</h1>
+              <h1 className='mt-2'>Help Center</h1>
+              <h1 className='mt-2'>helpline</h1>
+              <h1 className='mt-2'>Help Center</h1>
+              </div>
+              <div className='pl-8 mt-3 flex gap-5 '>
+                <div className='flex font-bold gap-3'>
+                <Earth/>
+                <p>English(Us)</p>
+                </div>
+                <div className='flex gap-3'>
+                  <DollarSign/> 
+                  <p className='font-bold'>USD</p>
+                </div>
+              </div>
+               <div className='flex gap-8 pl-8 mt-5'>
+                <LucideFacebook/>
+                <XIcon/>
+                <InstagramIcon/>
+               </div>
+
+               <div className='pl-8 mt-5'>
+                <h1>© 2025 Airbnb, Inc.</h1>
+
+               </div>
+               <div className='flex gap-3 pl-8 mt-5'>
+                <h1>·TermsSite</h1>
+                 <h1> map</h1>
+                 <h1> Privacy</h1>
+                 <h1> Your Privacy</h1>
+                <h1>   Choices</h1>
+               </div>
+      </div>
+      <div>
+
+      </div>
+
 
 
       {/* <div className='bg-red-200 h-225 mt-15 '>

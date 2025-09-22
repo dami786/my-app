@@ -1,4 +1,4 @@
-import { Building, Building2Icon, Divide, Earth, FactoryIcon, Menu, Sea, SearchIcon, SendIcon, TreePalmIcon, TreesIcon, WavesIcon } from 'lucide-react'
+import { Building, Building2Icon, Divide, Earth, FactoryIcon, Menu, Sea, Search, SearchIcon, SendIcon, TreePalmIcon, TreesIcon, WavesIcon } from 'lucide-react'
 import React from 'react'
 import { useState, useEffect } from 'react'
 import Hero from './Hero';
@@ -34,7 +34,7 @@ function Navbar() {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  
+
   useEffect(() => {
     function handleClickOutside(event) {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
@@ -100,7 +100,7 @@ function Navbar() {
 
     <>
 
-      <div className='bg-gray-100  h-[210px] overflow-hidden font-sans border-b-3 border-gray-300'>
+      <div className='bg-gray-100  h-[210px] hidden lg:block overflow-hidden font-sans border-b-3 border-gray-300'>
 
         {!showFixedNav && (
 
@@ -210,8 +210,8 @@ function Navbar() {
                         onClick={() => setIsOpen9(!isOpen9)}
 
                       />
-                      {isOpen9  && (
-                        <div  className='bg-white shadow-md border-gray-300 top-15 rounded-2xl border absolute h-[400px] w-[500px] overflow-hidden hover:overflow-y-scroll'>
+                      {isOpen9 && (
+                        <div className='bg-white shadow-md border-gray-300 top-15 rounded-2xl border absolute h-[400px] w-[500px] overflow-hidden hover:overflow-y-scroll'>
                           <p className='text-sm ml-7 mt-6'>Suggested destination</p>
                           <div className='ml-4 mr-8 mt-1 hover:bg-[#ebebeb] rounded-2xl flex py-2 items-center gap-4'>
                             <div className='w-[80px] h-[60px] bg-[#f0f5fa] rounded-xl ml-3 flex items-center justify-center'>
@@ -296,13 +296,13 @@ function Navbar() {
                         </div>
                       )}
                     </div>
-                     {isOpen  && (
+                    {isOpen && (
                       <div ref={dropdownRef} className='bg-white absolute z-5 h-[68px] top-28 w-[300px] border-gray-100 rounded-full transition-smooth duration-100'></div>
                     )
-                    } 
+                    }
                   </div>
                   <div className='py-4 w-[140px] hover:bg-gray-100 border-gray-100 hover:rounded-full group z-10 text-sm  ' onClick={() => { setIsOpen4(!isOpen4) }}>
-                    {isOpen4  && (
+                    {isOpen4 && (
                       <div ref={dropdownRef} className='bg-white absolute w-[140px] h-[67px] top-28  rounded-full z-5' ></div>
                     )}
                     <div className='absolute z-50'>
@@ -343,7 +343,7 @@ function Navbar() {
 
                 <div className='justify-between flex py-3 w-[267px] hover:bg-gray-100 border-gray-50 border-l z-50 hover:rounded-full group-hover:border-none text-sm items-center' onClick={() => { setIsOpen5(!isOpen5) }}>
                   {isOpen5 && (
-                    <div ref={dropdownRef}  className='bg-white absolute w-[268px] h-[67.5px] top-27.5 z-5 rounded-full z-5' ></div>
+                    <div ref={dropdownRef} className='bg-white absolute w-[268px] h-[67.5px] top-27.5 z-5 rounded-full z-5' ></div>
                   )}
                   <a className='absolute z-50 '>
                     <p className='ml-4 font-semibold'>Who</p>
@@ -411,11 +411,51 @@ function Navbar() {
 
         </div>
       </div>
+  <div className='lg:hidden py-4 bg-gray-200 flex justify-center items-center  '>
+    <div className='w-full flex justify-center bg-gray-100 rounded-full py-7 mx-3'>
+      <Search/>
+    <input
+    type='text'
+    placeholder='Search'
+    className='outline-none ml-3'
+    />
+    </div>
+    
 
-
-
-
-
+  </div>
+       
+    
+    <div className='h-[100px] lg:hidden flex justify-center bg-gray-200'>
+    <div className='flex justify-center gap-7'>
+      <div className=' items-center'>
+        <img 
+        src='icon2.png'
+        width={50}
+        className='ml-1.5'
+        
+        />
+          <a className='font-semibold'>Homes</a>
+          </div>
+          <div className='flex justify-center'>
+          <div className=''>
+            <img
+            src='icon3.avif'
+            width={50}
+            className='ml-3.5'
+            />
+          <a>Experiences</a>
+          </div>
+          </div>
+          <div>
+            <img 
+            src='icon4.avif'
+            width={50}
+            className='ml-1.5'
+            />
+          <a>Services</a>
+          </div>
+        </div>
+        </div>
     </>
   )
 
