@@ -416,8 +416,8 @@ function Navbar() {
       <Search/>
     <input
     type='text'
-    placeholder='Search'
-    className='outline-none ml-3'
+    placeholder='Start your Search '
+    className='outline-none ml-3 placeholder:font-bold ml-5'
     />
     </div>
     

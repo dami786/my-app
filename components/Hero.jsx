@@ -39,7 +39,13 @@ function Hero() {
      1024: {
       slidesPerView: 6,
     },
+    2560:
+    {
+      slidesPerView: 8,
+    }
   }}
+
+
 >
   {products.map((product) => (
     <SwiperSlide key={product.id}>
@@ -121,7 +127,7 @@ function Hero() {
       </div>
       <div className=' px-8 mt-2 relative '>
         <div className='flex items-center justify-between'>
-      <p className='font-bold text-2xl text-black mt-8 flex items-center'>Availaible in Nathiagali Next Weekend<span><ChevronRight size={20} /></span></p>
+      <p className='font-bold text-2xl text-black mt-8 items-center flex '>Availaible in Nathiagali <span><ChevronRight size={20} /></span></p>
       <div className='flex items-center mt-8'>
         <button className="hero-prev2 rounded-full"><ChevronLeftIcon size={20}/></button>
         <button className="hero-next2 rounded-full"><ChevronRight size={20}/></button>
