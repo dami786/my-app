@@ -80,7 +80,7 @@ function Hero() {
       
       <div className=' lg:px-8 px-6 mt-2 relative '>
         <div className='flex items-center justify-between'>
-      <p className='font-bold text-2xl text-black mt-8 flex items-center'>Popular Homes in Murree<span><ChevronRight size={20} /></span></p>
+      <p className='font-bold  text-m lg:text-2xl text-black mt-8 flex items-center'>Popular Homes in Murree<span><ChevronRight size={20} /></span></p>
       <div className='flex items-center mt-8'>
         <button className="hero-prev1 rounded-full"><ChevronLeftIcon size={20}/></button>
         <button className="hero-next1 rounded-full"><ChevronRight size={20}/></button>
