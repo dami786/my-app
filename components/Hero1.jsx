@@ -34,7 +34,7 @@ function hero1() {
       <div className='px-8 items-center font-sans'>
         <div className='flex  items-center justify-between'>
           <div className='flex items-center'>
-            <p className='font-bold text-2xl text-black mt-8 flex items-center'>Popular Homes in Islamabad<span><ChevronRight size={20} /></span></p>
+            <p className='font-bold text-m lg:text-2xl text-black mt-8 flex items-center'>Popular Homes in Islamabad<span><ChevronRight className='lg:w-15 lg:h-5 w-8 h-4 items-center lg:mt-1 ' /></span></p>
           </div>
           <div className='mt-8'>
             <button className='hero-prev3'><ChevronLeftIcon /></button>
@@ -59,8 +59,8 @@ function hero1() {
           {products3.map((product3) => (
             <SwiperSlide key={product3.id}>
               <div className='h-fit  mt-2'>
-                <div className='flex absolute  mt-4 mx-2 gap-15 lg:gap-13'>
-                  <p className='text-xs bg-white/70 backdrop-blur-lg border border-white/50 px-2 py-1 rounded-full'>{product3.Label}</p>
+                <div className='flex absolute  mt-4 mx-2 gap-16 lg:gap-13'>
+                  <p className='text-xs bg-white/70 backdrop-blur-lg border border-white/50 lg:px-2 px-0.5 py-1 rounded-full'>{product3.Label}</p>
                   <p className=' text-white hover:scale-110'>{product3.label2}</p>
 
                 </div>
@@ -83,7 +83,7 @@ function hero1() {
       </div>
       <div className='px-8'>
         <div className='flex justify-between'>
-          <p className='font-bold text-2xl text-black mt-8 flex items-center'>Popular Homes in Karachi<span><ChevronRight size={20} /></span></p>
+          <p className='font-bold text-m lg:text-2xl text-black mt-8 flex items-center'>Popular Homes in Karachi<span><ChevronRight size={20} /></span></p>
           <div className='flex mt-8'>
             <button className='hero-prev4 text-black '><ChevronLeftIcon /></button>
             <button className='hero-next4 text-black'><ChevronRight /></button>
@@ -106,7 +106,7 @@ function hero1() {
           {products4.map((product4) => (
             <SwiperSlide key={product4.id} className='h-fit mt-3'>
               <div className='flex absolute  mt-4 mx-2 gap-15 lg:gap-13'>
-                <p className='text-xs bg-white/70 backdrop-blur-lg border border-white/50 px-2 py-1 rounded-full'>{product4.Label}</p>
+                <p className='text-xs bg-white/70 backdrop-blur-lg border border-white/50  px-1 lg:px-2 py-1 rounded-full'>{product4.Label}</p>
                 <p className='text-black text-white hover:scale-110'>{product4.label2}</p>
 
               </div>

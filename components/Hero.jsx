@@ -16,7 +16,7 @@ function Hero() {
     
       <div className=' lg:px-8 px-4 relative '>
         <div className='flex items-center justify-between'>
-      <p className='font-bold text-sm lg:text-2xl text-black mt-8 flex items-center'>Popular Homes in Lahore<span><ChevronRight size={20} /></span></p>
+      <p className='font-bold text-m lg:text-2xl text-black mt-8 flex items-center'>Popular Homes in Lahore<span><ChevronRight size={20} /></span></p>
       <div className='flex items-center mt-8'>
         <button className="hero-prev rounded-full"><ChevronLeftIcon size={20}/></button>
         <button className="hero-next rounded-full"><ChevronRight size={20}/></button>
@@ -50,8 +50,8 @@ function Hero() {
   {products.map((product) => (
     <SwiperSlide key={product.id}>
       <div className='h-fit mt-2'>
-        <div className='flex gap-15 lg:gap-13 mx-2 absolute mt-4 '>
-          <p className='text-xs bg-white/70 backdrop-blur-lg border border-white/50 px-1 lg:px-2 py-1 rounded-full'>
+        <div className='flex gap-16 lg:gap-13 mx-2 absolute mt-4 '>
+          <p className='text-xs bg-white/70 backdrop-blur-lg border border-white/50 px-1  lg:px-2 py-1 rounded-full'>
             {product.Label}
           </p>
           <p className='text-white hover:scale-110'>{product.label2}</p>
@@ -80,7 +80,7 @@ function Hero() {
       
       <div className=' lg:px-8 px-6 mt-2 relative '>
         <div className='flex items-center justify-between'>
-      <p className='font-bold  text-sm lg:text-2xl text-black mt-8 flex items-center'>Popular Homes in Murree<span><ChevronRight size={20} /></span></p>
+      <p className='font-bold  text-m lg:text-2xl text-black mt-8 flex items-center '>Popular Homes in Murree<span><ChevronRight size={20} /></span></p>
       <div className='flex items-center mt-8'>
         <button className="hero-prev1 rounded-full"><ChevronLeftIcon size={20}/></button>
         <button className="hero-next1 rounded-full"><ChevronRight size={20}/></button>
@@ -127,7 +127,7 @@ function Hero() {
       </div>
       <div className=' px-8 mt-2 relative '>
         <div className='flex items-center justify-between'>
-      <p className='font-bold text-2xl text-black mt-8 items-center flex '>Availaible in Nathiagali <span><ChevronRight size={20} /></span></p>
+      <p className='font-bold text-m lg:text-2xl text-black mt-8 items-center flex '>Availaible in Nathiagali <span><ChevronRight size={20} /></span></p>
       <div className='flex items-center mt-8'>
         <button className="hero-prev2 rounded-full"><ChevronLeftIcon size={20}/></button>
         <button className="hero-next2 rounded-full"><ChevronRight size={20}/></button>
@@ -151,7 +151,7 @@ function Hero() {
             <SwiperSlide key={product2.id}>
               <div className='h-fit  mt-2'>
                 <div className='flex absolute gap-15 lg:gap-13  mt-4 mx-2 '>
-                  <p className='text-xs bg-white/70 backdrop-blur-lg border border-white/50 px-2 py-1 rounded-full'>{product2.Label}</p>
+                  <p className='text-xs bg-white/70 backdrop-blur-lg border border-white/50 lg:px-2 px-0.5 py-1 rounded-full'>{product2.Label}</p>
                   <p className=' text-white hover:scale-110'>{product2.label2}</p>
 
                 </div>
